@@ -24,7 +24,6 @@ public class ClassicalBinarySearchTest {
   }
 
   @Test
-  @Disabled
   void testBaseCase() {
     ClassicalBinarySearch myClass = new ClassicalBinarySearch();
     int[] array = {};
@@ -33,7 +32,6 @@ public class ClassicalBinarySearchTest {
   }
 
   @Test
-  @Disabled
   void testOneElementFound() {
     ClassicalBinarySearch myClass = new ClassicalBinarySearch();
     int[] array = { 1 };
@@ -42,7 +40,6 @@ public class ClassicalBinarySearchTest {
   }
 
   @Test
-  @Disabled
   void testOneElementNotFound() {
     ClassicalBinarySearch myClass = new ClassicalBinarySearch();
     int[] array = { 1 };

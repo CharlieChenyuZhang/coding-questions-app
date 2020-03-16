@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import java.util.Arrays;
 
 import com.codingquestions.app.BinarySearch.SearchInSortedMatrixI;
 
@@ -22,12 +23,27 @@ public class SearchInSortedMatrixITest {
     }
 
     @Test
-    // @Disabled
     void testBaseCase() {
-        ClassicalBinarySearch myClass = new ClassicalBinarySearch();
-        int[] array = {};
+        SearchInSortedMatrixI myClass = new SearchInSortedMatrixI();
+        int[][] array = {};
+        int[] result = { -1, -1 };
+        Assertions.assertTrue(Arrays.equals(myClass.search(array, -1), result));
+    }
 
-        Assertions.assertEquals(-1, myClass.binarySearch(array, -1));
+    @Test
+    void testNotFound() {
+        int[][] matrix = { { 1, 2, 3 }, { 4, 5, 7 }, { 8, 9, 10 } };
+        SearchInSortedMatrixI myClass = new SearchInSortedMatrixI();
+        int[] result = { -1, -1 };
+        Assertions.assertTrue(Arrays.equals(myClass.search(matrix, -1), result));
+    }
+
+    @Test
+    void testFound() {
+        int[][] matrix = { { 1, 2, 3 }, { 4, 5, 7 }, { 8, 9, 10 } };
+        SearchInSortedMatrixI myClass = new SearchInSortedMatrixI();
+        int[] result = { 0, 0 };
+        Assertions.assertTrue(Arrays.equals(myClass.search(matrix, 1), result));
     }
 
     @AfterEach
