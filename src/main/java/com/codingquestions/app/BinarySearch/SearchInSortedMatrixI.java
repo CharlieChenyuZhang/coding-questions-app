@@ -1,4 +1,4 @@
-package com.codingquestions.app;
+package com.codingquestions.app.BinarySearch;
 
 // Problem:
 // Given a 2D matrix that contains integers only, which each row is sorted in an ascending order. The first element of next row is larger than (or equal to) the last element of previous row.
@@ -17,6 +17,8 @@ package com.codingquestions.app;
 // target = 6, return {-1, -1} to represent the target number does not exist in the matrix.
 
 // Solution:
+// TIME: 
+// SPACE: 
 public class SearchInSortedMatrixI {
 
 }

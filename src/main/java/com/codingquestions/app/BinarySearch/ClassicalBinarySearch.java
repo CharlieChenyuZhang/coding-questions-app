@@ -1,4 +1,4 @@
-package com.codingquestions.app;
+package com.codingquestions.app.BinarySearch;
 
 // Problem:
 // Given a target integer T and an integer array A sorted in ascending order, find the index i such that A[i] == T or return -1 if there is no such index.
@@ -16,6 +16,8 @@ package com.codingquestions.app;
 // What if A is null or A is of zero length? We should return -1 in this case.
 
 // Solution:
+// TIME: O(log n)
+// SPACE: O(1)
 public class ClassicalBinarySearch {
     public int binarySearch(int[] array, int target) {
         // assume the array has been sorted in ascending order

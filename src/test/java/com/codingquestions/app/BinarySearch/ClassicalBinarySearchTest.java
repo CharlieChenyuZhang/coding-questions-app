@@ -1,4 +1,4 @@
-package com.codingquestions.app;
+package com.codingquestions.app.BinarySearch;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import com.codingquestions.app.ClassicalBinarySearch;
+import com.codingquestions.app.BinarySearch.ClassicalBinarySearch;
 
 public class ClassicalBinarySearchTest {
 
