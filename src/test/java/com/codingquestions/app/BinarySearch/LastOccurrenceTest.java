@@ -1,5 +1,6 @@
-package com.codingquestions.app;
+package com.codingquestions.app.BinarySearch;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
@@ -12,9 +13,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 // import the class that you want to test here
-// import com.codingquestions.app.SearchInSortedMatrixI;
+import com.codingquestions.app.BinarySearch.LastOccurrence;
 
-public class TestTemplate {
+public class LastOccurrenceTest {
 
     @BeforeAll
     static void setup() {
@@ -26,7 +27,9 @@ public class TestTemplate {
 
     @Test
     void testOne() {
-        assertTrue(true);
+        int[] array = { 1, 2, 2, 2, 5, 8 };
+        LastOccurrence myClass = new LastOccurrence();
+        assertEquals(3, myClass.lastOccur(array, 2));
     }
 
     @AfterEach

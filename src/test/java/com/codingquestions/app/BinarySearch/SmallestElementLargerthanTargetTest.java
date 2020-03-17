@@ -1,5 +1,6 @@
-package com.codingquestions.app;
+package com.codingquestions.app.BinarySearch;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
@@ -12,9 +13,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 // import the class that you want to test here
-// import com.codingquestions.app.SearchInSortedMatrixI;
+import com.codingquestions.app.BinarySearch.SmallestElementLargerthanTarget;
 
-public class TestTemplate {
+public class SmallestElementLargerthanTargetTest {
 
     @BeforeAll
     static void setup() {
@@ -26,7 +27,10 @@ public class TestTemplate {
 
     @Test
     void testOne() {
-        assertTrue(true);
+        int[] array = { 4, 13, 14, 19, 20, 21, 30, 31, 32, 36, 40, 41, 41, 50, 55, 58, 61, 66, 78, 82, 92, 93 };
+        SmallestElementLargerthanTarget myClass = new SmallestElementLargerthanTarget();
+
+        assertEquals(6, myClass.smallestElementLargerThanTarget(array, 21));
     }
 
     @AfterEach
