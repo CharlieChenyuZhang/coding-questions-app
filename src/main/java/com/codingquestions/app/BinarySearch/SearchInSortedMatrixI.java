@@ -17,8 +17,8 @@ package com.codingquestions.app.BinarySearch;
 // target = 6, return {-1, -1} to represent the target number does not exist in the matrix.
 
 // Solution:
-// TIME: 
-// SPACE: 
+// TIME: O(log M x N)
+// SPACE:  O(1)
 public class SearchInSortedMatrixI {
     public int[] search(int[][] matrix, int target) {
         int[] result = { -1, -1 };
