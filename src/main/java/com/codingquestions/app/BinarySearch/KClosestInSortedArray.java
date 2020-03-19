@@ -22,7 +22,7 @@ package com.codingquestions.app.BinarySearch;
 // Solution:
 public class KClosestInSortedArray {
 
-    // TIME: O(log n + k)
+    // TIME: O(log n + k) // when k >> n, it lose the benefit of binary serach
     // SPACE: O(k)
     public int[] kClosestSolutionOne(int[] array, int target, int k) {
         if (array == null || array.length == 0) {
@@ -71,6 +71,8 @@ public class KClosestInSortedArray {
     }
 
     // TODO:
+    // TIME:
+    // SPACE:
     public int[] kClosestSolutionTwo(int[] array, int target, int k) {
         return new int[] { 1, 2, 3 };
     }
