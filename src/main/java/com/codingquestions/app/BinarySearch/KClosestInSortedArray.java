@@ -69,12 +69,4 @@ public class KClosestInSortedArray {
         }
         return result;
     }
-
-    // TODO:
-    // TIME:
-    // SPACE:
-    public int[] kClosestSolutionTwo(int[] array, int target, int k) {
-        return new int[] { 1, 2, 3 };
-    }
-
 }
