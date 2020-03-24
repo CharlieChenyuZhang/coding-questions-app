@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PlayGround",
+      "request": "launch",
+      "mainClass": "com.playground.PlayGround",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - MyImplementationAbstractClass",
+      "request": "launch",
+      "mainClass": "com.playground.MyImplementationAbstractClass",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - MyImplementation",
+      "request": "launch",
+      "mainClass": "com.playground.MyImplementation",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}",
+      "vmArgs": "-enableassertions"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-PlayGround<coding-questions-app>",
+      "request": "launch",
+      "mainClass": "PlayGround",
+      "projectName": "coding-questions-app",
+      "vmArgs": "-enableassertions"
+    }
+  ]
+}
