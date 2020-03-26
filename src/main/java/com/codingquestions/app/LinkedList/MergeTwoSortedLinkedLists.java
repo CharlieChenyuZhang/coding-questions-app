@@ -1,4 +1,4 @@
-package com.codingquestions.app;
+package com.codingquestions.app.LinkedList;
 
 import com.codingquestions.app.utils.ListNode;
 
@@ -8,5 +8,5 @@ import com.codingquestions.app.utils.ListNode;
 // Solution:
 // TIME:
 // SPACE:
-public class Template {
+public class MergeTwoSortedLinkedLists {
 }
