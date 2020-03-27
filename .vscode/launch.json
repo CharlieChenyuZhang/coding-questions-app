@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - CheckIfLinkedListIsPalindrome",
+      "request": "launch",
+      "mainClass": "com.codingquestions.app.LinkedList.CheckIfLinkedListIsPalindrome",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - CheckIfLinkedListIsPalindrome",
+      "request": "launch",
+      "mainClass": "com.codingquestions.app.BinarySearch.CheckIfLinkedListIsPalindrome",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PartitionLinkedList",
+      "request": "launch",
+      "mainClass": "com.codingquestions.app.LinkedList.PartitionLinkedList",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ReOrderLinkedList",
+      "request": "launch",
+      "mainClass": "com.codingquestions.app.LinkedList.ReOrderLinkedList",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - PlayGround",
       "request": "launch",
       "mainClass": "com.playground.PlayGround",

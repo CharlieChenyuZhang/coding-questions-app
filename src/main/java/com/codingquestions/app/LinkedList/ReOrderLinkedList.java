@@ -15,8 +15,8 @@ import com.codingquestions.app.utils.ListNode;
  */
 
 // Solution:
-// TIME:
-// SPACE:
+// TIME: O(n)
+// SPACE: O(1)
 public class ReOrderLinkedList {
     public ListNode reorder(ListNode head) {
         if (head == null || head.next == null) {
@@ -32,6 +32,8 @@ public class ReOrderLinkedList {
         return merge(firstHalf, reversedSecondHalf);
     }
 
+    // TIME: O(n)
+    // SPACE: O(1)
     private ListNode findMidNode(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -48,6 +50,8 @@ public class ReOrderLinkedList {
         return slowPointer;
     }
 
+    // TIME: O(n)
+    // SPACE: O(1)
     private ListNode reverse(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -65,6 +69,8 @@ public class ReOrderLinkedList {
         return prev;
     }
 
+    // TIME: O(n)
+    // SPACE: O(1)
     private ListNode merge(ListNode one, ListNode two) {
         ListNode dummyHead = new ListNode(0);
 
@@ -78,8 +84,25 @@ public class ReOrderLinkedList {
             curr = curr.next;
             curr.next = pointer2;
             pointer2 = pointer2.next;
+            curr = curr.next;
+        }
+        // post-processing
+        if (pointer1 != null) {
+            curr.next = pointer1;
+        } else {
+            curr.next = pointer2;
         }
         return dummyHead.next;
+    }
+
+    public static void main(String[] args) {
+        ReOrderLinkedList instance = new ReOrderLinkedList();
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        System.out.println(head);
+        System.out.println(instance.reorder(head));
     }
 
 }
