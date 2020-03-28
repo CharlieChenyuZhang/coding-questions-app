@@ -1,23 +1,17 @@
 package com.playground;
 
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.List;
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Collections;
 
 class PlayGround {
     public static void main(String[] args) {
-        PlayGround s = new PlayGround();
-        s = null;
-
-        // Requesting JVM to call Garbage Collector method
-        System.gc();
-        System.out.println("Main Completes");
+        Deque<Integer> stack = new ArrayDeque<>();
+        System.out.println(stack.isEmpty());
     }
 
-    // Here overriding finalize method
-    public void finalize() {
-        System.out.println("finalize method overriden");
-    }
 }
