@@ -2,7 +2,7 @@
 package com.codingquestions.app.utils;
 
 public class ListNode {
-    public int value;
+    public int value; // FIXME: generics
     public ListNode next;
 
     public ListNode(int value) {

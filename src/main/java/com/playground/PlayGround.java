@@ -10,8 +10,6 @@ import java.util.Collections;
 
 class PlayGround {
     public static void main(String[] args) {
-        Deque<Integer> stack = new ArrayDeque<>();
-        System.out.println(stack.isEmpty());
-    }
 
+    }
 }
