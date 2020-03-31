@@ -13,8 +13,7 @@ import java.util.ArrayDeque;
  */
 
 // Solution:
-// TIME:
-// SPACE:
+// TIME: Amortized offer takes O (1) time
 public class DequeByThreeStacks {
 
     // NOTE: for stackLeft, stackRight and buffer, I am using
