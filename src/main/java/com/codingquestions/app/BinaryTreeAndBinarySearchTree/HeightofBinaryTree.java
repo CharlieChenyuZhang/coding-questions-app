@@ -1,4 +1,4 @@
-package com.codingquestions.app;
+package com.codingquestions.app.BinaryTreeAndBinarySearchTree;
 
 import com.codingquestions.app.utils.TreeNode;
 import java.util.Deque;
@@ -10,5 +10,5 @@ import java.util.ArrayDeque;
 // Solution:
 // TIME:
 // SPACE:
-public class Template {
+public class HeightofBinaryTree {
 }
