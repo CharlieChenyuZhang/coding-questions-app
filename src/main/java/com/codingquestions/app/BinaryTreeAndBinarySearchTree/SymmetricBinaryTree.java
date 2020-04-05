@@ -75,7 +75,7 @@ public class SymmetricBinaryTree {
         } else if (left == null || right == null) {
             return false;
         } else if (left.key != right.key) {
-            return flase;
+            return false;
         }
 
         return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
