@@ -8,12 +8,14 @@ import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Collections;
 import com.codingquestions.app.utils.TreeNode;
+import java.util.TreeSet;
 
 class PlayGround {
     public static void main(String[] args) {
-        TreeNode a1 = new TreeNode(1);
-        TreeNode a2 = new TreeNode(1);
-        System.out.println(a1.equals(a2));
+        TreeSet<Integer> myTS = new TreeSet<Integer>();
+        myTS.add(1);
+        myTS.add(1);
+        System.out.println(myTS);
 
     }
 }
