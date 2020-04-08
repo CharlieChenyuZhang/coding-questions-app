@@ -23,6 +23,8 @@ import java.util.Comparator;
  * the 5th smallest number is 4 the 8th smallest number is 6
  */
 
+// TIME: O(klogk)
+// SPACE: O(k + n^2), or O(k) if using a HashMap
 public class KthSmallestNumberInSortedMatrix {
 
     public int kthSmallest(int[][] matrix, int k) {
@@ -38,7 +40,10 @@ public class KthSmallestNumberInSortedMatrix {
         // when we poped out the k-1 elements from the minHeap
         // dedup - HashSet to tract which nodes have been expanded
 
-        PriorityQueue<Cell> minHeap = new PriorityQueue<Cell>(new Comparator<Cell>() {
+        // Explan why we can initiate the size of minheap to k
+        // whever we pop out one element, we inserted two, so the minHeap size will be
+        // 1, 2, 3, 4, 5, ..., k
+        PriorityQueue<Cell> minHeap = new PriorityQueue<Cell>(k, new Comparator<Cell>() {
             @Override
             public int compare(Cell c1, Cell c2) {
                 if (c1.value == c2.value) {

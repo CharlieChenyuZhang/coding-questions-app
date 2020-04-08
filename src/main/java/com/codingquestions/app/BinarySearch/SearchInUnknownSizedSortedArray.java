@@ -1,7 +1,5 @@
 package com.codingquestions.app.BinarySearch;
 
-import javax.naming.BinaryRefAddr;
-
 import com.codingquestions.app.utils.MyDict;
 
 // Problem:

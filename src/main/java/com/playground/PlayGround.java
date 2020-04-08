@@ -10,23 +10,21 @@ import java.util.Collections;
 import com.codingquestions.app.utils.TreeNode;
 import java.util.TreeSet;
 import java.util.HashSet;
+import java.util.Queue;
+import java.util.PriorityQueue;
+import java.lang.StringBuilder;
 
-class Cell {
-    int row;
-    int column;
-    int value;
+public class PlayGround {
 
-    Cell(int row, int column, int value) {
-        this.row = row;
-        this.column = column;
-        this.value = value;
+    static void test(int myint) {
+
+        System.out.println("in function: " + myint);
     }
-}
-
-class PlayGround {
 
     public static void main(String[] args) {
-        int[] test = new int[2];
-        System.out.println(test[0]);
+        int i = 1;
+        System.out.println(i);
+        test(i++);
+        System.out.println(i);
     }
 }
