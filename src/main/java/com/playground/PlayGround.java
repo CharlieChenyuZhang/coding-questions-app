@@ -16,15 +16,7 @@ import java.lang.StringBuilder;
 
 public class PlayGround {
 
-    static void test(int myint) {
-
-        System.out.println("in function: " + myint);
-    }
-
     public static void main(String[] args) {
-        int i = 1;
-        System.out.println(i);
-        test(i++);
-        System.out.println(i);
+
     }
 }
