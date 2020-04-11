@@ -36,8 +36,6 @@ import java.util.ArrayList;
  * ]
  */
 
-// TIME:
-// SPACE:
 public class CombinationsOfCoins {
     public List<List<Integer>> combinations(int target, int[] coins) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
