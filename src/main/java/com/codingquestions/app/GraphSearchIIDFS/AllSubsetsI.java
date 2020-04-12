@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * Set = "", all the subsets are [""] Set = null, all the subsets are []
  */
 
-// TIME: O(2^n)
+// TIME: O(2^n * n) // times n because sb.toString in the last layer
 // SPACE: O(n)
 public class AllSubsetsI {
     public List<String> subSets(String set) {

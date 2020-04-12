@@ -2,7 +2,6 @@ package com.codingquestions.app.GraphSearchIIDFS;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.lang.StringBuilder;
 
 /**
  * Given a string with no duplicate characters, return a list with all
@@ -17,7 +16,8 @@ import java.lang.StringBuilder;
  * Set = "", all permutations are [""]
  */
 
-// TIME: O(n!)
+// TIME: O(n! * n) // times n because in the base case we are newing a new
+// string
 // SPACE: O(n)
 public class AllPermutationsI {
     public List<String> permutations(String input) {

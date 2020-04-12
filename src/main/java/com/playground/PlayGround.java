@@ -11,12 +11,15 @@ import com.codingquestions.app.utils.TreeNode;
 import java.util.TreeSet;
 import java.util.HashSet;
 import java.util.Queue;
+import java.lang.Comparable;
 import java.util.PriorityQueue;
 import java.lang.StringBuilder;
+import java.util.HashMap;
 
 public class PlayGround {
 
     public static void main(String[] args) {
+        HashMap<String, Integer> test = new HashMap<>();
 
     }
 }

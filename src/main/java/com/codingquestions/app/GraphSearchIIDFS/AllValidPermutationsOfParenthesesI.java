@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * ["((()))", "(()())", "(())()", "()(())", "()()()"]
  */
 
-// TIME: O(2^n)
+// TIME: O(2^(2n) * n) // times n at the end because sb.toString() in base case
 // SPACE: O(2n + n) where 2n is the depth of the tree and n is the sb ==> O(n)
 public class AllValidPermutationsOfParenthesesI {
     public List<String> validParentheses(int n) {
