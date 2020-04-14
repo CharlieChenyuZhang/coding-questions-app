@@ -15,11 +15,13 @@ import java.lang.Comparable;
 import java.util.PriorityQueue;
 import java.lang.StringBuilder;
 import java.util.HashMap;
+import java.lang.String;
 
 public class PlayGround {
 
     public static void main(String[] args) {
-        HashMap<String, Integer> test = new HashMap<>();
 
+        char[] array = new char[] { 'a', 'b', 'c', 'd' };
+        System.out.println(new String(array, 0, 2));
     }
 }
