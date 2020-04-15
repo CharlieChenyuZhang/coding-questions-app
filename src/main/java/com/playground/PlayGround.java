@@ -20,8 +20,8 @@ import java.lang.String;
 public class PlayGround {
 
     public static void main(String[] args) {
-
-        char[] array = new char[] { 'a', 'b', 'c', 'd' };
-        System.out.println(new String(array, 0, 2));
+        StringBuilder sb = new StringBuilder();
+        sb.append("ACV");
+        System.out.println(sb.toString());
     }
 }
