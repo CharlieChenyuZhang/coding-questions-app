@@ -20,8 +20,6 @@ import java.lang.String;
 public class PlayGround {
 
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("ACV");
-        System.out.println(sb.toString());
+        List<int[]> test = new ArrayList<>();
     }
 }
