@@ -20,6 +20,6 @@ import java.lang.String;
 public class PlayGround {
 
     public static void main(String[] args) {
-        List<int[]> test = new ArrayList<>();
+
     }
 }
