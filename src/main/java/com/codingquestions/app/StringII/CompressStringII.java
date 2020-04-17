@@ -15,6 +15,8 @@ package com.codingquestions.app.StringII;
  * “abbcccdeee” → “a1b2c3d1e3”
  */
 
+// TIME:
+// SPACE:
 public class CompressStringII {
     public String compress(String input) {
         if (input == null || input.isEmpty()) {

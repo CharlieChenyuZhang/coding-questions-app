@@ -20,6 +20,8 @@ import java.lang.String;
 public class PlayGround {
 
     public static void main(String[] args) {
+        char one = '1';
+        System.out.println(Character.getNumericValue(one));
 
     }
 }
