@@ -20,8 +20,9 @@ import java.lang.String;
 public class PlayGround {
 
     public static void main(String[] args) {
-        char one = '1';
-        System.out.println(Character.getNumericValue(one));
+        String test1 = "ab";
+        String test2 = "a" + "b";
+        System.out.println(test1 == test2);
 
     }
 }
