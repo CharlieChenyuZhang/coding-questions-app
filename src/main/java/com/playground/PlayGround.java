@@ -17,12 +17,29 @@ import java.lang.StringBuilder;
 import java.util.HashMap;
 import java.lang.String;
 
+class Parent {
+    int age;
+
+    public Parent(int age) {
+        this.age = age;
+    }
+
+    public void sayName() {
+        System.out.println("my name is Charlie");
+    }
+}
+
+class Child extends Parent {
+    public Child(int age) {
+        super(age);
+    }
+
+}
+
 public class PlayGround {
 
     public static void main(String[] args) {
-        String test1 = "ab";
-        String test2 = "a" + "b";
-        System.out.println(test1 == test2);
-
+        Child instance = new Child(12);
+        instance.sayName();
     }
 }
