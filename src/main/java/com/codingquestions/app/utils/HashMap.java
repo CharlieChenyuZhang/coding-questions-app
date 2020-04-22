@@ -102,6 +102,22 @@ public class HashMap<K, V> {
         return false;
     }
 
+    public boolean containsKey(K key) {
+        if (isEmpty()) {
+            return false;
+        }
+
+        for (Node<K, V> node : buckets) {
+            while (node != null) {
+                if (equalsKey(node.key, key)) {
+                    return true;
+                }
+                node = node.next;
+            }
+        }
+        return false;
+    }
+
     public Node<K, V> put(K key, V value) {
         // case 1, if we can find it, we update and return the old value
         // case 2, couldn't find, add to the head
@@ -113,7 +129,7 @@ public class HashMap<K, V> {
         }
 
         // check if we have reached the loadFactor limit
-        if ((float) size / capacity >= loadFactor) {
+        if ((float) size + 1 / capacity >= loadFactor) {
             resize();
         }
 
