@@ -1,5 +1,7 @@
 package com.codingquestions.app.utils;
 
+import java.util.Arrays;
+
 /**
  * OOD
  * 
@@ -36,22 +38,37 @@ public class HashMap<K, V> {
     }
 
     private int size = 0;
-    private static int initialCapacity = 16;
+    private static final int DEFAULT_CAPACITY = 16;
     private int capacity;
-    private static float initialLoadFactor = 0.75f;
-    private float loadFactor = initialLoadFactor;
+    private static final float DEFAULT_LOAD_FACTOR = 0.75f;
+    private float loadFactor;
 
     private Node<K, V>[] buckets;
 
     public HashMap() {
-        this(initialCapacity, initialLoadFactor); // cascading
+        this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR); // cascading
     }
 
     @SuppressWarnings("unchecked")
-    public HashMap(int capacity, float loadFactor) {
+    public HashMap(int capacity, float loadFactor) throws IllegalArgumentException {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("capacity cannot be <= 0");
+        }
         buckets = (Node<K, V>[]) (new Node[capacity]);
         this.capacity = capacity;
         this.loadFactor = loadFactor;
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public void clear() {
+        Arrays.fill(this.buckets, null);
     }
 
     public Node<K, V> get(K key) {
@@ -91,6 +108,7 @@ public class HashMap<K, V> {
         return newNode;
     }
 
+    @SuppressWarnings("unchecked")
     private void resize() {
         capacity = 2 * capacity;
         Node<K, V>[] newBuckets = (Node<K, V>[]) (new Node[capacity]);
