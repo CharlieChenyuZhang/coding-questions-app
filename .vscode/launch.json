@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Manager",
+      "request": "launch",
+      "mainClass": "com.playground.Manager",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - CheckIfLinkedListIsPalindrome",
       "request": "launch",
       "mainClass": "com.codingquestions.app.LinkedList.CheckIfLinkedListIsPalindrome",

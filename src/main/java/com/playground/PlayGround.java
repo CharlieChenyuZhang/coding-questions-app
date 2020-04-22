@@ -21,9 +21,9 @@ public class PlayGround {
     public class Employee {
         private final String name = "charlie";
         private final String id = "1";
-        private int age;
-        protected int salary;
-        protected int level;
+        private int age = 2;
+        protected int salary = 3;
+        protected int level = 4;
         int test = 1;
         public int test2 = 2;
 
@@ -33,19 +33,11 @@ public class PlayGround {
     }
 
     public class Manager extends Employee {
-        public Manager() {
-
-        }
+        public Manager() {}
 
         public void xxx() {
-            // System.out.println(salary);
-            // printInfo();
-
             Employee e = new Employee();
-            System.out.println(e.name); // FIXME:
-
-            // Manager m = new Manager();
-            // System.out.println(m.name + m.id + m.id + m.salary);{
+            System.out.println(e.name + e.id + e.age + e.salary + e.level + e.test + e.test2);
         }
     }
 
@@ -54,5 +46,4 @@ public class PlayGround {
         Manager m = pg.new Manager();
         m.xxx();
     }
-
 }

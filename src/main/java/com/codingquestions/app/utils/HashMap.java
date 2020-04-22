@@ -85,6 +85,23 @@ public class HashMap<K, V> {
         return null;
     }
 
+    public boolean containsValue(V value) {
+        // special case
+        if (isEmpty()) {
+            return false;
+        }
+
+        for (Node<K, V> node : buckets) {
+            while (node != null) {
+                if (equalsValue(node.value, value)) {
+                    return true;
+                }
+                node = node.next;
+            }
+        }
+        return false;
+    }
+
     public Node<K, V> put(K key, V value) {
         // case 1, if we can find it, we update and return the old value
         // case 2, couldn't find, add to the head
@@ -168,6 +185,10 @@ public class HashMap<K, V> {
 
     private boolean equalsKey(K key1, K key2) {
         return key1 == key2 || key1 != null && key1.equals(key2);
+    }
+
+    private boolean equalsValue(V v1, V v2) {
+        return v1 == v2 || v1 != null && v2.equals(v2);
     }
 
 }
