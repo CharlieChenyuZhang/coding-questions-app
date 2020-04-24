@@ -16,11 +16,14 @@ import java.util.PriorityQueue;
 import java.lang.StringBuilder;
 import java.util.HashMap;
 import java.lang.String;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PlayGround {
 
     public static void main(String[] args) {
-        System.out.println((float) 1 / 2);
-        System.out.println((1 + 0.0f) / 2);
+        Double i = 2.2;
+        Integer p = 1;
+        System.out.println(i > p);
     }
 }
