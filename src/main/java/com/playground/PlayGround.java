@@ -22,10 +22,18 @@ import java.util.regex.Pattern;
 import com.playground.Person;
 import com.playground.Employee;
 import com.playground.MyAbstractClass;
+import java.lang.ArithmeticException;
+import java.lang.AbstractMethodError;
+import java.lang.Exception;
 
 public class PlayGround {
 
-    public static void main(String[] args) {
-        int result = 1 / 0;
+    public static void main(String[] args) throws Exception {
+        try {
+
+            int result = 1 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println(":charlie");
+        }
     }
 }
