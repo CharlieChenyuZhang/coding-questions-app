@@ -19,11 +19,14 @@ import java.lang.String;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.playground.Person;
+import com.playground.Employee;
+
 public class PlayGround {
 
     public static void main(String[] args) {
-        Double i = 2.2;
-        Integer p = 1;
-        System.out.println(i > p);
+        Person p = new Employee();
+        String company = ((Employee) p).getCompany();
+        System.out.println(company);
     }
 }

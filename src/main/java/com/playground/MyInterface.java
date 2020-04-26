@@ -1,9 +1,11 @@
 package com.playground;
 
-interface MyInterface extends I2, I3 {
+public interface MyInterface extends I2, I3 {
     String name = "Charlie Zhang";
 
-    public void getName();
+    public abstract void getName(); // we don't need to add abastract
+
+    public void setName();
 
 }
 

@@ -1,12 +1,20 @@
 package com.playground;
 
-public class Employee {
+import com.playground.Person;
 
-    protected void f1() {
-        System.out.println("f1 printed");
+public class Employee extends Person {
+
+    private String company = "Charlie Inc.";
+
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    void f2() {
-        System.out.println("f2 printed");
+    public String getCompany() {
+        return this.company;
+    }
+
+    public String getName() {
+        return getName() + "!";
     }
 }
