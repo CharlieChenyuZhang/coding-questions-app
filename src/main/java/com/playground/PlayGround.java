@@ -29,11 +29,12 @@ import java.lang.Exception;
 public class PlayGround {
 
     public static void main(String[] args) throws Exception {
-        try {
+        long test1 = ((long) Integer.MAX_VALUE + 1);
+        long test2 = (long) (Integer.MAX_VALUE + 1);
+        long test3 = Integer.MAX_VALUE + 1l;
+        System.out.println(test1);
+        System.out.println(test2);
+        System.out.println(test3);
 
-            int result = 1 / 0;
-        } catch (ArithmeticException e) {
-            System.out.println(":charlie");
-        }
     }
 }
