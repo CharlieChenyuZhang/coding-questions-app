@@ -17,11 +17,11 @@ public class MyImplementationInterface implements MyInterface {
 
     @Override
     public void test1() {
-    }
+    };
 
     @Override
     public void test2() {
-    }
+    };
 
     public static void main(String[] args) {
         MyImplementationInterface myclass = new MyImplementationInterface("Charlie");

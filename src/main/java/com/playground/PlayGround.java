@@ -21,12 +21,11 @@ import java.util.regex.Pattern;
 
 import com.playground.Person;
 import com.playground.Employee;
+import com.playground.MyAbstractClass;
 
 public class PlayGround {
 
     public static void main(String[] args) {
-        Person p = new Employee();
-        String company = ((Employee) p).getCompany();
-        System.out.println(company);
+        int result = 1 / 0;
     }
 }

@@ -5,8 +5,6 @@ public interface MyInterface extends I2, I3 {
 
     public abstract void getName(); // we don't need to add abastract
 
-    public void setName();
-
 }
 
 interface I2 {
