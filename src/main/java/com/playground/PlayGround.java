@@ -28,13 +28,35 @@ import java.lang.Exception;
 
 public class PlayGround {
 
-    public static void main(String[] args) throws Exception {
-        long test1 = ((long) Integer.MAX_VALUE + 1);
-        long test2 = (long) (Integer.MAX_VALUE + 1);
-        long test3 = Integer.MAX_VALUE + 1l;
-        System.out.println(test1);
-        System.out.println(test2);
-        System.out.println(test3);
+    private int powerHelper(int a, int b) {
+        if (b == 0) {
+            return 1;
+        }
+        int half = powerHelper(a, b / 2);
+        if (b % 2 == 0) {
+            return half * half;
+        } else {
+            return half * half * a;
+        }
+    }
 
+    public double power(int a, int b) {
+        if (a == 0) {
+            if (b <= 0) {
+                return -1 * 1l;
+            }
+            return 0;
+        }
+
+        if (b >= 0) {
+            return powerHelper(a, b);
+        } else {
+            return powerHelper(a, -b);
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        PlayGround instance = new PlayGround();
+        System.out.println(instance.power(-2, 4));
     }
 }
