@@ -1,4 +1,4 @@
-package com.codingquestions.StringII;
+package com.codingquestions.app.StringII;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,9 +13,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 // import the class that you want to test here
-import com.codingquestions.app.StringII.DecompressStringII;
+import com.codingquestions.app.StringII.CompressStringII;
 
-public class DecompressStringIITest {
+public class CompressStringIITest {
 
     @BeforeAll
     static void setup() {
@@ -27,8 +27,8 @@ public class DecompressStringIITest {
 
     @Test
     void testOne() {
-        DecompressStringII instance = new DecompressStringII();
-        assertEquals("aaaaaaaaaa", instance.decompress("a10"));
+        CompressStringII instance = new CompressStringII();
+        assertEquals("a1b1c1", instance.compress("abc"));
     }
 
     @AfterEach

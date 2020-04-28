@@ -1,10 +1,7 @@
-package com.codingquestions.StringII;
+package com.codingquestions.app.StringII;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.List;
-import java.util.ArrayList;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -16,9 +13,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 // import the class that you want to test here
-import com.codingquestions.app.StringII.AllPermutationsII;
+import com.codingquestions.app.StringII.ReverseString;
 
-public class AllPermutationsIITest {
+public class ReverseStringTest {
 
     @BeforeAll
     static void setup() {
@@ -30,10 +27,8 @@ public class AllPermutationsIITest {
 
     @Test
     void testOne() {
-        AllPermutationsII instance = new AllPermutationsII();
-        List<String> result = new ArrayList<>();
-        result.add("");
-        assertEquals(result, instance.permutations("    "));
+        ReverseString instance = new ReverseString();
+        assertEquals("bababa", instance.reverse("ababab"));
     }
 
     @AfterEach

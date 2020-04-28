@@ -1,10 +1,7 @@
-package com.codingquestions.StringII;
+package com.codingquestions.app.StringII;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.Arrays;
-import java.util.List;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -16,9 +13,9 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 // import the class that you want to test here
-import com.codingquestions.app.StringII.ThreeSlidingWIndowQuestions.LongestSubarrayContainsOnly1s;
+import com.codingquestions.app.StringII.DecompressStringII;
 
-public class LongestSubarrayContainsOnly1sTest {
+public class DecompressStringIITest {
 
     @BeforeAll
     static void setup() {
@@ -30,9 +27,8 @@ public class LongestSubarrayContainsOnly1sTest {
 
     @Test
     void testOne() {
-        LongestSubarrayContainsOnly1s instance = new LongestSubarrayContainsOnly1s();
-
-        assertEquals(2, instance.longestConsecutiveOnesMethod2(new int[] { 1, 0, 0, 1, 1 }, 0));
+        DecompressStringII instance = new DecompressStringII();
+        assertEquals("aaaaaaaaaa", instance.decompress("a10"));
     }
 
     @AfterEach
