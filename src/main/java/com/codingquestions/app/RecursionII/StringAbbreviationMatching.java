@@ -38,7 +38,7 @@ public class StringAbbreviationMatching {
 
         // recursive rule
         // case 1: pattern.charAt(patternIndex) is not a char
-        if (pattern.charAt(patternIndex) < '0' && pattern.charAt(patternIndex) > '9') {
+        if (pattern.charAt(patternIndex) < '0' || pattern.charAt(patternIndex) > '9') {
             if (pattern.charAt(patternIndex) == input.charAt(inputIndex)) {
                 return matchHelper(input, pattern, inputIndex + 1, patternIndex + 1);
             }
@@ -54,4 +54,37 @@ public class StringAbbreviationMatching {
         }
         return matchHelper(input, pattern, inputIndex + num, patternIndex);
     }
+
+    // iterative way
+    public boolean match2(String input, String pattern) {
+        int inputIndex = 0;
+        int patternIndex = 0;
+        while (inputIndex < input.length() && patternIndex < pattern.length()) {
+            // case 1: handling character
+            if (pattern.charAt(patternIndex) < '0' || pattern.charAt(patternIndex) > '9') {
+                if (pattern.charAt(patternIndex) != input.charAt(inputIndex)) {
+
+                    return false;
+                }
+                inputIndex++;
+                patternIndex++;
+            } else {
+
+                // case 2, handling digits
+                int num = 0;
+                while (patternIndex < pattern.length() && pattern.charAt(patternIndex) >= '0'
+                        && pattern.charAt(patternIndex) <= '9') {
+                    num = num * 10 + pattern.charAt(patternIndex) - '0';
+                    patternIndex++;
+                }
+                inputIndex += num;
+            }
+
+        }
+
+        // at least one of them has reached the end
+        return inputIndex == input.length() && patternIndex == pattern.length();
+
+    }
+
 }
