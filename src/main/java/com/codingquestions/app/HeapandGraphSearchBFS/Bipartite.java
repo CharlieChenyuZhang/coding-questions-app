@@ -1,6 +1,6 @@
 package com.codingquestions.app.HeapandGraphSearchBFS;
 
-import com.codingquestions.app.utils.GraphNode;
+import com.codingquestions.app.util.GraphNode;
 import java.util.List;
 import java.util.HashMap;
 import java.util.ArrayDeque;

@@ -1,6 +1,6 @@
 package com.codingquestions.app.HeapandGraphSearchBFS;
 
-import com.codingquestions.app.utils.TreeNode;
+import com.codingquestions.app.util.TreeNode;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;

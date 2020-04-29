@@ -1,6 +1,6 @@
 package com.codingquestions.app.RecursionII;
 
-import com.codingquestions.app.utils.TreeNodeLeft;
+import com.codingquestions.app.util.TreeNodeLeft;
 
 /**
  * Given a binary tree, count the number of nodes in each node’s left subtree,

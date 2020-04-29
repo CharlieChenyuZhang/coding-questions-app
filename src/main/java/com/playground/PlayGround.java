@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Collections;
-import com.codingquestions.app.utils.TreeNode;
+import com.codingquestions.app.util.TreeNode;
 import java.util.TreeSet;
 import java.util.HashSet;
 import java.util.Queue;

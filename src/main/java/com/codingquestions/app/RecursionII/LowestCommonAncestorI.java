@@ -1,6 +1,6 @@
 package com.codingquestions.app.RecursionII;
 
-import com.codingquestions.app.utils.TreeNode;
+import com.codingquestions.app.util.TreeNode;
 
 /**
  * Given two nodes in a binary tree, find their lowest common ancestor.

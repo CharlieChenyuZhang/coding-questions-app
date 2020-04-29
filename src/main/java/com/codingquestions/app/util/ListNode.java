@@ -1,5 +1,5 @@
 
-package com.codingquestions.app.utils;
+package com.codingquestions.app.util;
 
 public class ListNode {
     public int value; // FIXME: generics

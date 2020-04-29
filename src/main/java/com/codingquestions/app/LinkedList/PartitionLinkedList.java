@@ -1,6 +1,6 @@
 package com.codingquestions.app.LinkedList;
 
-import com.codingquestions.app.utils.ListNode;
+import com.codingquestions.app.util.ListNode;
 
 // Problem:
 /** */

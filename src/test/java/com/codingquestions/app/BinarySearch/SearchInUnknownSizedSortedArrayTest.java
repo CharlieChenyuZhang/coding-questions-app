@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 // import the class that you want to test here
 import com.codingquestions.app.BinarySearch.SearchInUnknownSizedSortedArray;
-import com.codingquestions.app.utils.MyDict;
+import com.codingquestions.app.util.MyDict;
 
 public class SearchInUnknownSizedSortedArrayTest {
 

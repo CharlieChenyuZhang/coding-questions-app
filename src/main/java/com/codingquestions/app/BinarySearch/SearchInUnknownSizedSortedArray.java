@@ -1,6 +1,6 @@
 package com.codingquestions.app.BinarySearch;
 
-import com.codingquestions.app.utils.MyDict;
+import com.codingquestions.app.util.MyDict;
 
 // Problem:
 /**

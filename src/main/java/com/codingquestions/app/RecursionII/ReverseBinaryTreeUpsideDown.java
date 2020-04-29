@@ -1,6 +1,6 @@
 package com.codingquestions.app.RecursionII;
 
-import com.codingquestions.app.utils.TreeNode;
+import com.codingquestions.app.util.TreeNode;
 
 /**
  * Given a binary tree where all the right nodes are leaf nodes, flip it upside

@@ -1,4 +1,4 @@
-package com.codingquestions.app.utils;
+package com.codingquestions.app.util;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

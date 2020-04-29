@@ -1,6 +1,6 @@
 package com.codingquestions.app.RecursionII;
 
-import com.codingquestions.app.utils.ListNode;
+import com.codingquestions.app.util.ListNode;
 
 /**
  * Reverse pairs of elements in a singly-linked list.

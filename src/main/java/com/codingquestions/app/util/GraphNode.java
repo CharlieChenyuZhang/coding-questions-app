@@ -1,4 +1,4 @@
-package com.codingquestions.app.utils;
+package com.codingquestions.app.util;
 
 import java.util.ArrayList;
 import java.util.List;
