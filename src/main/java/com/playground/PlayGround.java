@@ -23,40 +23,21 @@ import com.playground.Person;
 import com.playground.Employee;
 import com.playground.MyAbstractClass;
 import java.lang.ArithmeticException;
+import java.io.IOException;
 import java.lang.AbstractMethodError;
 import java.lang.Exception;
 
 public class PlayGround {
 
-    private int powerHelper(int a, int b) {
-        if (b == 0) {
-            return 1;
-        }
-        int half = powerHelper(a, b / 2);
-        if (b % 2 == 0) {
-            return half * half;
-        } else {
-            return half * half * a;
-        }
-    }
-
-    public double power(int a, int b) {
-        if (a == 0) {
-            if (b <= 0) {
-                return -1 * 1l;
-            }
-            return 0;
-        }
-
-        if (b >= 0) {
-            return powerHelper(a, b);
-        } else {
-            return powerHelper(a, -b);
+    void B() throws Exception {
+        try {
+            throw new IOException();
+        } catch (IOException e) {
+            throw new Exception();
         }
     }
 
     public static void main(String[] args) throws Exception {
-        PlayGround instance = new PlayGround();
-        System.out.println(instance.power(-2, 4));
+        System.out.println(1 / 0);
     }
 }

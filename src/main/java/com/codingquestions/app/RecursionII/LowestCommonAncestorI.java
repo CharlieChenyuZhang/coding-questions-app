@@ -27,9 +27,10 @@ import com.codingquestions.app.util.TreeNode;
  * 
  * The lowest common ancestor of 2 and 9 is 9
  */
-
-// TIME:
-// SPACE:
+/**
+ * public class TreeNode { public int key; public TreeNode left; public TreeNode
+ * right; public TreeNode(int key) { this.key = key; } }
+ */
 public class LowestCommonAncestorI {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode one, TreeNode two) {
         if (root == null) {

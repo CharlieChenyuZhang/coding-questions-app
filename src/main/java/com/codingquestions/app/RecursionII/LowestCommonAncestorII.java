@@ -33,6 +33,11 @@ import com.codingquestions.app.util.TreeNodeP;
 
 // TIME: O(height1 + height2)
 // SPACE: O(1)
+/**
+ * public class TreeNodeP { public int key; public TreeNodeP left; public
+ * TreeNodeP right; public TreeNodeP parent; public TreeNodeP(int key, TreeNodeP
+ * parent) { this.key = key; this.parent = parent; } }
+ */
 public class LowestCommonAncestorII {
     public TreeNodeP lowestCommonAncestor(TreeNodeP one, TreeNodeP two) {
         int l1 = length(one);
