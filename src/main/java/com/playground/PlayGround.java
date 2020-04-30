@@ -29,7 +29,7 @@ import java.lang.Exception;
 
 public class PlayGround {
     public static void main(String[] args) throws Exception {
-        String i = null;
+        int[][] M = new int[2][3];
 
     }
 }
