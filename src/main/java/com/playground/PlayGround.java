@@ -28,16 +28,8 @@ import java.lang.AbstractMethodError;
 import java.lang.Exception;
 
 public class PlayGround {
-
-    void B() throws Exception {
-        try {
-            throw new IOException();
-        } catch (IOException e) {
-            throw new Exception();
-        }
-    }
-
     public static void main(String[] args) throws Exception {
-        System.out.println(1 / 0);
+        String i = null;
+
     }
 }
