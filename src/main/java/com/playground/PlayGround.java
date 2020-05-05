@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Collections;
 import com.codingquestions.app.util.TreeNode;
+import com.codingquestions.app.util.PersonEnum;
+import com.codingquestions.app.util.RainbowColorEnum;
 import java.util.TreeSet;
 import java.util.HashSet;
 import java.util.Queue;
@@ -26,10 +28,13 @@ import java.lang.ArithmeticException;
 import java.io.IOException;
 import java.lang.AbstractMethodError;
 import java.lang.Exception;
+import java.lang.RuntimeException;
 
 public class PlayGround {
-    public static void main(String[] args) throws Exception {
-        int[][] M = new int[2][3];
+    public static void main(String[] args) throws Exception, IOException {
+        Object[] test = new Object[2];
+        test[0] = 1;
+        test[1] = true;
 
     }
 }

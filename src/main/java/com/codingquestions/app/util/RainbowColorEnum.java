@@ -1,5 +1,6 @@
 package com.codingquestions.app.util;
 
+// This is an example of how you use ENUM
 public enum RainbowColorEnum {
     RED(1, "r"), ORANGE(2, "o");
 
@@ -27,6 +28,6 @@ class Test {
         System.out.println(color1.label);
         System.out.println(color2.label);
         System.out.println(color1.name);
-        System.out.println(color2.name);
+
     }
 }
