@@ -32,6 +32,7 @@ public class DictionaryWordI {
      * 
      */
 
+    // TIME: O(n^3) because the usage of substring API
     public boolean canBreak(String input, String[] dict) {
         Set<String> dictSet = toSet(dict);
         boolean[] M = new boolean[input.length() + 1];

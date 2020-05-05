@@ -18,6 +18,40 @@ package com.codingquestions.app.DynamicProgramming;
  * this case.
  */
 
+// Analysis:
+// M[i] represents the minimum number of jump from index i to the end of array
+
+// e.g.
+// 3 3 1 0 4
+// M 2 1 -1 -1 0
+
+// M[i] = 1 if array[i] + i >= array.length - 1
+// = min(1 + M[j] for all j in [i+1, array.length - 1] && M[j] != -1)
+
+// TIME: O(n^2)
+// SPACE: O(n)
 public class ArrayHopperII {
+    public int minJump(int[] array) {
+        if (array.length == 1) {
+            return 0;
+        }
+        int[] M = new int[array.length];
+        M[array.length - 1] = 0;
+        for (int i = array.length - 2; i >= 0; i--) {
+            if (array[i] + i >= array.length - 1) {
+                M[i] = 1;
+                continue;
+            }
+            M[i] = -1;
+            for (int j = array[i]; j >= 1; j--) {
+                if (M[i + j] == -1) {
+                    continue;
+                } else {
+                    M[i] = Math.min(M[i] == -1 ? Integer.MAX_VALUE : M[i], 1 + M[i + j]);
+                }
+            }
+        }
+        return M[0];
+    }
 
 }
