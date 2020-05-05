@@ -68,4 +68,28 @@ public class LongestAscendingSubArray {
         return maxLength;
     }
 
+    // sliding window
+    // semantics [left, right) is the window that contains result
+    public int longestIII(int[] array) {
+        if (array == null) {
+            return -1;
+        }
+
+        if (array.length == 0) {
+            return 0;
+        }
+
+        int left = 0;
+        int maxLength = 0;
+
+        for (int right = 0; right < array.length; right++) {
+            if (right == 0 || array[right] > array[right - 1]) {
+                maxLength = Math.max(right - left + 1, maxLength);
+            } else {
+                left = right;
+            }
+        }
+        return maxLength;
+    }
+
 }
