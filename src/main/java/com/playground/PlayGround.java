@@ -32,8 +32,8 @@ import java.lang.RuntimeException;
 
 public class PlayGround {
     public static void main(String[] args) throws Exception, IOException {
-        int[] test = new int[2];
-        System.out.println(test[0]);
+        String test = "123";
+        System.out.println(test.substring(0, 0));
 
     }
 }

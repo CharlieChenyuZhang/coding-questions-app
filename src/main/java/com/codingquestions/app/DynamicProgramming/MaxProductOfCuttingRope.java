@@ -16,5 +16,37 @@ package com.codingquestions.app.DynamicProgramming;
  */
 
 public class MaxProductOfCuttingRope {
+    // M[i] represents the largest product that can be made by cutting i meter long
+    // rope (with at least 1 cut)
+
+    // method 1: left big + right big
+    public int maxProduct(int length) {
+        int[] M = new int[length + 1];
+        M[0] = 0;
+        M[1] = 0;
+        for (int i = 1; i <= length; i++) { // the length of the rope
+            int curMax = 0;
+            for (int j = 1; j <= i / 2; j++) { // length of left
+                curMax = Math.max(curMax, Math.max(j, M[j]) * Math.max(i - j, M[i - j]));
+            }
+            M[i] = curMax;
+        }
+        return M[length];
+    }
+
+    // method 2: left big + right small (generic, more recommended)
+    public int maxProductII(int length) {
+        int[] M = new int[length + 1];
+        M[0] = 0;
+        M[1] = 0;
+        for (int i = 1; i <= length; i++) { // the length of the rope
+            int curMax = 0;
+            for (int j = 1; j < i; j++) { // length of left
+                curMax = Math.max(curMax, Math.max(j, M[j]) * (i - j));
+            }
+            M[i] = curMax;
+        }
+        return M[length];
+    }
 
 }
