@@ -32,9 +32,8 @@ import java.lang.RuntimeException;
 
 public class PlayGround {
     public static void main(String[] args) throws Exception, IOException {
-        Object[] test = new Object[2];
-        test[0] = 1;
-        test[1] = true;
+        int[] test = new int[2];
+        System.out.println(test[0]);
 
     }
 }
