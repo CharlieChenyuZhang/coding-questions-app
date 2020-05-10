@@ -30,9 +30,13 @@ import java.lang.AbstractMethodError;
 import java.lang.Exception;
 import java.lang.RuntimeException;
 
-public class PlayGround {
+public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
+    public void print() {
+        System.out.println(1);
+    }
+
     public static void main(String[] args) throws Exception, IOException {
-        byte[] test = new byte[2];
-        System.out.println(test[1]);
+        PlayGround pg = new PlayGround();
+        pg.print();
     }
 }
