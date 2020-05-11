@@ -154,16 +154,16 @@ public class LongestCrossOf1s {
         return merge2(leftUp, rightDown, N, M);
     }
 
-private int merge2(int[][] leftUp, int[][] rightDown, int N, int M) {
-	int result = 0;
-	for (int i = 0; i < N; i++) {
-	for (int j = 0; j < M, j++) {
-	leftUp[i][j] = Math.min(leftUp[i][j], rightDown[i][j]);
-	result = Math.max(result, leftUp[i][k]);
-}
-}
-return result;
-}
+    private int merge2(int[][] leftUp, int[][] rightDown, int N, int M) {
+        int result = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                leftUp[i][j] = Math.min(leftUp[i][j], rightDown[i][j]);
+                result = Math.max(result, leftUp[i][j]);
+            }
+        }
+        return result;
+    }
 
     private int[][] leftUp(int[][] matrix, int N, int M) {
         int[][] left = new int[N][M];
