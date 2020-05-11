@@ -31,12 +31,21 @@ import java.lang.Exception;
 import java.lang.RuntimeException;
 
 public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
-    public void print() {
-        System.out.println(1);
+
+    static class Fruit {
+    }
+
+    static class Apple extends Fruit {
+    }
+
+    static class GreenApple extends Apple {
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        PlayGround pg = new PlayGround();
-        pg.print();
+        List<Fruit> fruits = new ArrayList<>();
+        // List<? super Apple> apples = fruits;
+        fruits.add(new Apple());
+        fruits.add(new GreenApple());
+        // apples.add(new Fruit());
     }
 }
