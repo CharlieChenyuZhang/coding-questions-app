@@ -47,5 +47,8 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
         fruits.add(new Apple());
         fruits.add(new GreenApple());
         // apples.add(new Fruit());
+        int[] test = { 1, -1, 4 };
+        Arrays.sort(test);
+        System.out.println(test[1]);
     }
 }
