@@ -28,15 +28,9 @@ public class LargestSubMatrixSumTest {
     @Test
     void testOne() {
         LargestSubMatrixSum instance = new LargestSubMatrixSum();
-        assertEquals(7, instance.largest(new int[][] {
+        assertEquals(1, instance.largest2(new int[][] {
 
-                { 1, -2, -1, 4 },
-
-                { 1, -1, 1, 1 },
-
-                { 0, -1, -1, 1 },
-
-                { 0, 0, 1, 1 } }));
+                { 1 }, { -2 } }));
     }
 
     @AfterEach
