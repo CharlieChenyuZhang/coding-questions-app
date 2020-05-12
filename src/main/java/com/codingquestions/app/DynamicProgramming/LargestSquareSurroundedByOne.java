@@ -1,7 +1,32 @@
 package com.codingquestions.app.DynamicProgramming;
 
 /**
+ * Determine the largest square surrounded by 1s in a binary matrix (a binary
+ * matrix only contains 0 and 1), return the length of the largest square.
  * 
+ * 
+ * 
+ * Assumptions
+ * 
+ * The given matrix is guaranteed to be of size M * N, where M, N >= 0
+ * 
+ * 
+ * 
+ * Examples
+ * 
+ * {{1, 0, 1, 1, 1},
+ * 
+ * {1, 1, 1, 1, 1},
+ * 
+ * {1, 1, 0, 1, 0},
+ * 
+ * {1, 1, 1, 1, 1},
+ * 
+ * {1, 1, 1, 0, 0}}
+ * 
+ * 
+ * 
+ * The largest square surrounded by 1s has length of 3.
  */
 public class LargestSquareSurroundedByOne {
     // step 1: preprocess the matrix to get M1[i][j] and M2[i][j]
