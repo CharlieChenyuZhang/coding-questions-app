@@ -22,6 +22,12 @@ import java.util.List;
  */
 
 public class AllPermutationsofSubsets {
+
+    /**
+     * Semantics int level represents the position to be selected i.e. [0, index -
+     * 1] are the chosen ones
+     */
+
     public List<String> allPermutationsOfSubsets(String set) {
         List<String> result = new ArrayList<>();
         if (set == null) {
