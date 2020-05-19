@@ -18,6 +18,9 @@ import java.util.List;
  */
 
 public class AllValidPermutationsOfParenthesesII {
+    /**
+     * The recursion tree has 2 * (l + m + n) level and 6 branches
+     */
 
     private static final char[] PS = new char[] { '(', ')', '<', '>', '{', '}' };
 
