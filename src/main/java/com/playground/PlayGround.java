@@ -42,14 +42,18 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        List<Fruit> fruits = new ArrayList<>();
+        // List<Fruit> fruits = new ArrayList<>();
         // List<? super Apple> apples = fruits;
-        fruits.add(new Apple());
-        fruits.add(new GreenApple());
+        // fruits.add(new Apple());
+        // fruits.add(new GreenApple());
         // apples.add(new Fruit());
-        int[] test = { 1, -1, 4 };
-        Arrays.sort(test);
+        // int[] test = { 1, -1, 4 };
+        // Arrays.sort(test);
         // System.out.println(test[1]);
-
+        String test = "123";
+        char[] array = test.toCharArray();
+        List<String> list = new ArrayList<>();
+        list.add(new String(array, 0, 1));
+        System.out.println(list);
     }
 }
