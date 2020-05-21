@@ -1,6 +1,7 @@
 package com.playground;
 
 import java.util.Arrays;
+import java.lang.Iterable;
 import java.util.Deque;
 import java.util.List;
 import java.util.ArrayDeque;
@@ -56,12 +57,17 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
         // list.add(new String(array, 0, 1));
         // System.out.println(list);
 
-        List<Integer> test = new ArrayList<>();
-        test.add(1);
-        test.add(2);
-        test.add(3);
-        test.subList(0, 1).clear();
-        System.out.println(test);
+        // List<Integer> test = new ArrayList<>();
+        // test.add(1);
+        // test.add(2);
+        // test.add(3);
+        // test.subList(0, 1).clear();
+        // System.out.println(test);
+
+        int[] test = { 1, 2, 3 };
+        for (int each : test) {
+            System.out.println(each);
+        }
 
     }
 }
