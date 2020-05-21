@@ -64,10 +64,9 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
         // test.subList(0, 1).clear();
         // System.out.println(test);
 
-        int[] test = { 1, 2, 3 };
-        for (int each : test) {
-            System.out.println(each);
-        }
+        Character one = '1';
+        Character two = '1';
+        System.out.println(one.equals(two));
 
     }
 }
