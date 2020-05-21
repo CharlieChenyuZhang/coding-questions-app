@@ -27,6 +27,15 @@ import java.util.List;
  * “(){}()”, “{()()}”, “{()}()”, “{}()()”].
  */
 
+/**
+ * restrictions:
+ * 
+ * 1. left bracket make sure remaining is > 0 I need to make sure the top
+ * element in stack has a higher priority than the bracket that I added in
+ * 
+ * 2. right bracket I can only add the one that matches the top element in stack
+ * 
+ */
 public class AllValidPermutationsOfParenthesesIII {
 
     private static char[] brackets = { '(', ')', '<', '>', '{', '}' };
