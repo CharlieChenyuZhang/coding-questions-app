@@ -50,10 +50,18 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
         // int[] test = { 1, -1, 4 };
         // Arrays.sort(test);
         // System.out.println(test[1]);
-        String test = "123";
-        char[] array = test.toCharArray();
-        List<String> list = new ArrayList<>();
-        list.add(new String(array, 0, 1));
-        System.out.println(list);
+        // String test = "123";
+        // char[] array = test.toCharArray();
+        // List<String> list = new ArrayList<>();
+        // list.add(new String(array, 0, 1));
+        // System.out.println(list);
+
+        List<Integer> test = new ArrayList<>();
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.subList(0, 1).clear();
+        System.out.println(test);
+
     }
 }
