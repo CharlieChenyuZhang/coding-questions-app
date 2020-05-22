@@ -42,6 +42,12 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     static class GreenApple extends Apple {
     }
 
+    private static void print(String[] input) {
+        for (String each : input) {
+            System.out.println(each);
+        }
+    }
+
     public static void main(String[] args) throws Exception, IOException {
         // List<Fruit> fruits = new ArrayList<>();
         // List<? super Apple> apples = fruits;
@@ -63,10 +69,12 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
         // test.add(3);
         // test.subList(0, 1).clear();
         // System.out.println(test);
-
-        Character one = '1';
-        Character two = '1';
-        System.out.println(one.equals(two));
-
+        List<String> result = new ArrayList<>();
+        result.add("1");
+        result.add("2");
+        result.add("3");
+        // System.out.println(result.toArray());
+        // System.out.println(result.toArray(new String[0]));
+        PlayGround.print(result.toArray(new String[3]));
     }
 }
