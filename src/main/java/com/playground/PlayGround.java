@@ -49,13 +49,7 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        StringBuilder sb = new StringBuilder();
-        sb.append('a');
-        sb.append('b');
-        sb.append('c');
-
-        System.out.println(sb.delete(sb.length() - 2, sb.length()));
-        System.out.println(sb);
+        System.out.println("1" + 1);
 
     }
 }
