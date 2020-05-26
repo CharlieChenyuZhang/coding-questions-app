@@ -49,6 +49,8 @@ public class GenerateRandomMaze {
     private void generate(int[][] maze, int x, int y) {
         // get a random shuffle of all directions
         // and follow the shuffled order to do DFS and backtrack
+        // NOTE: this is backtrack in a sense that we return when we can't
+        // find any other valid directio nwhen we backtrack all the way to the beginning
         Dir[] dirs = Dir.values();
         shuffle(dirs);
         for (Dir dir : dirs) {

@@ -18,5 +18,31 @@ package com.codingquestions.app.DFSII;
  */
 
 public class KeepDistanceForIdenticalElements {
+    // recursion tree has k level and dynamic number of branches
+    public int[] keepDistance(int k) {
+        int[] array = new int[2 * k];
+        return helper(array, k) ? array : null;
+    }
+
+    private boolean helper(int[] array, int k) {
+        // base case
+        if (k == 0) {
+            return true;
+        }
+
+        // I place number k in index i
+        for (int i = 0; i < array.length - k - 1; i++) {
+            if (array[i] == 0 && array[i + k + 1] == 0) {
+                array[i] = k;
+                array[i + k + 1] = k;
+                if (helper(array, k - 1)) {
+                    return true;
+                }
+                array[i] = 0;
+                array[i + k + 1] = 0;
+            }
+        }
+        return false;
+    }
 
 }
