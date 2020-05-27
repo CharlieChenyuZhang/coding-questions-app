@@ -1,4 +1,4 @@
-package com.codingquestions.app.RecursionIII.Type1;
+package com.codingquestions.app.RecursionIII.Type2;
 
 import java.util.ArrayList;
 import java.util.HashSet;

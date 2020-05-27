@@ -1,4 +1,4 @@
-package com.codingquestions.app.RecursionIII.Type1;
+package com.codingquestions.app.RecursionIII.Type2;
 
 import com.codingquestions.app.util.TreeNode;
 
