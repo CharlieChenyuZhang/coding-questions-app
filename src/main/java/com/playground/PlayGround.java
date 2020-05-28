@@ -43,9 +43,7 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     }
 
     private static void print(String[] input) {
-        for (String each : input) {
-            System.out.println(each);
-        }
+        return;
     }
 
     public static void main(String[] args) throws Exception, IOException {
