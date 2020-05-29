@@ -77,4 +77,24 @@ public class ReconstructBinarySearchTreeWithPostorderTraversal {
         return size;
     }
 
+    // method 2 [not required for interview]
+    public TreeNode reconstruct2(int[] post) {
+        int[] index = new int[] { post.length - 1 };
+        return helper2(post, index, Integer.MIN_VALUE);
+    }
+
+    private TreeNode helper2(int[] postorder, int[] index, int min) {
+        if (index[0] < 0 || postorder[index[0]] <= min) {
+            return null;
+        }
+        TreeNode root = new TreeNode(postorder[index[0]--]);
+        root.right = helper2(postorder, index, root.key); // valid root.right shuld be greater than root.key
+        root.left = helper2(postorder, index, min); // valid root.left should be greater than previous min
+        return root;
+    }
+
+    public static void main(String[] args) {
+        ReconstructBinarySearchTreeWithPostorderTraversal instance = new ReconstructBinarySearchTreeWithPostorderTraversal();
+        instance.reconstruct2(new int[] { 3, 8, 5 });
+    }
 }

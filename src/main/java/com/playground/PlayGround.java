@@ -33,21 +33,21 @@ import java.lang.RuntimeException;
 
 public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
 
-    static class Fruit {
-    }
-
-    static class Apple extends Fruit {
-    }
-
-    static class GreenApple extends Apple {
-    }
-
-    private static void print(String[] input) {
-        return;
+    public static void shuffle(int[] dirs) {
+        for (int i = 0; i < dirs.length; i++) {
+            int index = (int) (Math.random() * (dirs.length - i));
+            int tmp = dirs[i];
+            dirs[i] = dirs[i + index];
+            dirs[i + index] = tmp;
+        }
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        System.out.println("1" + 1);
+        int[] tmp = { 1, 2, 3, 4 };
+        shuffle(tmp);
+        for (int each : tmp) {
+            System.out.println(each);
+        }
 
     }
 }
