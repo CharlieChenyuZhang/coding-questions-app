@@ -43,11 +43,7 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        int[] tmp = { 1, 2, 3, 4 };
-        shuffle(tmp);
-        for (int each : tmp) {
-            System.out.println(each);
-        }
-
+        int i = 0, b = 0, c = 1;
+        System.out.println(c);
     }
 }
