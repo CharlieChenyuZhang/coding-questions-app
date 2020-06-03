@@ -60,7 +60,7 @@ public class KthSmallestWithOnly357AsFactors {
 
         long result = seed;
         while (k > 1) {
-            if (three.peekFirst() < five.peekFirst() && five.peekFirst() < seven.peekFirst()) {
+            if (three.peekFirst() < five.peekFirst() && three.peekFirst() < seven.peekFirst()) {
                 result = three.pollFirst();
                 three.offerLast(result * 3);
                 five.offerLast(result * 5);
@@ -73,6 +73,7 @@ public class KthSmallestWithOnly357AsFactors {
                 result = seven.pollFirst();
                 seven.offerLast(result * 7);
             }
+            k--;
         }
         return result;
     }
