@@ -2,6 +2,9 @@ package com.codingquestions.app.GraphSearchAlgorithmsIII;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Set;
 
 /**
  * Find the Kth smallest number s such that s = 3 ^ x * 5 ^ y * 7 ^ z, x > 0 and
