@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - LargestProductOfLength",
+      "request": "launch",
+      "mainClass": "com.codingquestions.app.GraphSearchAlgorithmsIII.LargestProductOfLength",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - KSubarrayEqualSumsII",
       "request": "launch",
       "mainClass": "com.codingquestions.app.DFSII.KSubarrayEqualSumsII",

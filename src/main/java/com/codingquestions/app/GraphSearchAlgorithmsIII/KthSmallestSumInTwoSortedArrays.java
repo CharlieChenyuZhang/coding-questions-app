@@ -63,7 +63,7 @@ public class KthSmallestSumInTwoSortedArrays {
             }
         }
 
-        if (A.length + B.length < k) {
+        if (A.length * B.length < k) {
             return -1;
         }
 
@@ -100,7 +100,7 @@ public class KthSmallestSumInTwoSortedArrays {
 
     public static void main(String[] args) {
         KthSmallestSumInTwoSortedArrays instance = new KthSmallestSumInTwoSortedArrays();
-        System.out.println(instance.kthSum(new int[] { 1, 3, 5, 8, 9 }, new int[] { 2, 3, 4, 7 }, 3));
+        System.out.println(instance.kthSum(new int[] { 1, 3, 5, 8, 9 }, new int[] { 2, 3, 4, 7 }, 14));
     }
 
 }

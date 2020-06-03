@@ -8,6 +8,8 @@ import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+
 import com.codingquestions.app.util.TreeNode;
 import com.codingquestions.app.util.PersonEnum;
 import com.codingquestions.app.util.RainbowColorEnum;
@@ -43,7 +45,9 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        int i = 0, b = 0, c = 1;
-        System.out.println(c);
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("key", 1);
+        int test = map.get("key");
+        System.out.println(test);
     }
 }
