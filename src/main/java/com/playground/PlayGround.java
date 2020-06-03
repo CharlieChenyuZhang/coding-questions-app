@@ -35,19 +35,89 @@ import java.lang.RuntimeException;
 
 public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
 
-    public static void shuffle(int[] dirs) {
-        for (int i = 0; i < dirs.length; i++) {
-            int index = (int) (Math.random() * (dirs.length - i));
-            int tmp = dirs[i];
-            dirs[i] = dirs[i + index];
-            dirs[i + index] = tmp;
+    static class Board {
+        public final static int R = 2;
+        public final static int C = 2;
+        private int[][] board = new int[R][C];
+
+        public Board() {
+        }
+
+        public Board(int[] values) {
+            for (int i = 0; i < R; i++) {
+                for (int j = 0; j < C; j++) {
+                    board[i][j] = values[i * C + j];
+                }
+            }
+        }
+
+        public void swap(int i1, int j1, int i2, int j2) {
+            int temp = board[i1][i2];
+            board[i1][j1] = board[i2][j2];
+            board[i2][j2] = temp;
+        }
+
+        public int[] findZero() {
+            for (int i = 0; i < R; i++) {
+                for (int j = 0; j < C; j++) {
+                    if (board[i][j] == 0) {
+                        return new int[] { i, j };
+                    }
+                }
+            }
+            return null;
+        }
+
+        // i is row number, j is column number
+        public boolean outOfBound(int i, int j) {
+            return i < 0 || i >= R || j < 0 || j >= C;
+        }
+
+        @Override
+        public int hashCode() {
+            int code = 0;
+            for (int i = 0; i < R; i++) {
+                for (int j = 0; j < C; j++) {
+                    code = code * 10 + board[i][j];
+                }
+            }
+            return code;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (!(o instanceof Board)) {
+                return false;
+            }
+
+            Board b = (Board) o;
+            for (int i = 0; i < R; i++) {
+                for (int j = 0; j < C; j++) {
+                    if (board[i][j] != b.board[i][j]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        @Override
+        public Board clone() {
+            Board c = new Board();
+            for (int i = 0; i < R; i++) {
+                for (int j = 0; j < C; j++) {
+                    c.board[i][j] = board[i][j];
+                }
+            }
+            return c;
         }
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("key", 1);
-        int test = map.get("key");
-        System.out.println(test);
+        HashMap<Board, Integer> map = new HashMap<>();
+        Board t1 = new Board(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+        map.put(t1, 12);
+        Board t2 = new Board(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
+        System.out.println(map.get(t2));
     }
 }
