@@ -66,7 +66,7 @@ public class LargestProductOfLength {
         return map;
     }
 
-    // method 2 (better, DFSII)
+    // method 2 (better, BFSII)
     class Cell {
         int row;
         int col;
@@ -105,6 +105,8 @@ public class LargestProductOfLength {
 
         // minHeap store the Cell to be expanded next
         minHeap.offer(new Cell(0, 1, dict[0].length() * dict[1].length()));
+        expanded[0][1] = true;
+
         while (minHeap.size() != 0) {
             Cell cur = minHeap.poll();
             int rowIndex = cur.row;
