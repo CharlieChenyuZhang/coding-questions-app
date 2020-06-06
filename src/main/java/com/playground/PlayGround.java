@@ -41,12 +41,10 @@ public class PlayGround<E extends Object & Comparable<E> & Iterable<E>> {
     }
 
     public static void main(String[] args) throws Exception, IOException {
-        // HashMap<Board, Integer> map = new HashMap<>();
-        // Board t1 = new Board(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-        // map.put(t1, 12);
-        // Board t2 = new Board(new int[] { 0, 1, 2, 3, 4, 5, 6, 7 });
-        // System.out.println(map.get(t2));
-        List<String> list = new ArrayList<>();
-        PlayGround.test(list);
+        List<List<Integer>> test = new ArrayList<>();
+        test.add(Arrays.asList(1, 2, 3, 4));
+        for (int each : test.get(0)) {
+            System.out.println(each);
+        }
     }
 }
