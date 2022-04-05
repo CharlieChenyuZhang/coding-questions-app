@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Template",
+      "request": "launch",
+      "mainClass": "com.codingquestions.app.Template",
+      "projectName": "coding-questions-app"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - WordLadderII",
       "request": "launch",
       "mainClass": "com.codingquestions.app.GraphSearchAlgorithmsIII.WordLadderII",

@@ -18,6 +18,8 @@ package com.codingquestions.app.RecursionIandSortingAlgorithms;
 // Solution:
 // TIME: O(n logn)
 // SPACE: O(n)
+
+// see the question MergeSortLinkedList to sort using a LinkedList
 public class MergeSort {
     public int[] mergeSort(int[] array) {
         if (array == null || array.length == 0) {
