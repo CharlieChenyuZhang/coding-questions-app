@@ -1,5 +1,6 @@
 package com.codingquestions.app.QueueAndStack;
 
+import java.util.Deque;
 import java.util.LinkedList;
 
 // Problem:
@@ -22,7 +23,7 @@ import java.util.LinkedList;
 // TIME: O(n^2)
 // SPACE: O(1)
 public class SortWith2Stacks {
-    public void sort(LinkedList<Integer> s1) {
+    public static void sort(LinkedList<Integer> s1) {
         LinkedList<Integer> s2 = new LinkedList<Integer>();
         if (s1 == null || s1.size() == 0) {
             return;
@@ -64,6 +65,14 @@ public class SortWith2Stacks {
         while (!s2.isEmpty()) {
             s1.offerFirst(s2.pollFirst());
         }
+    }
+
+    public static void main(String[] args) {
+        LinkedList<Integer> s1 = new LinkedList<>();
+        s1.add(1);
+        s1.add(3);
+        s1.add(2);
+        sort(s1);
     }
 
 }
