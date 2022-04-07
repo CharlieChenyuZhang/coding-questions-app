@@ -19,8 +19,8 @@ import java.util.ArrayDeque;
 
 // Solution:
 public class StackWithMin2 {
-    Deque<Integer> stack;
-    Deque<Integer> minStack;
+    Deque<Integer> stack; // stores the original value
+    Deque<Integer> minStack; // store the min element so far in stack
 
     public StackWithMin2() {
         stack = new ArrayDeque<>();

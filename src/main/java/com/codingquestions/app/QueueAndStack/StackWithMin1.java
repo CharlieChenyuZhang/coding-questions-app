@@ -36,7 +36,7 @@ public class StackWithMin1 {
         int topValue = stack.pollFirst();
         if (topValue >= globalMin) {
             return topValue;
-        } else {
+        } else { // when topValue < globalMin
             int value = globalMin;
             globalMin = 2 * globalMin - topValue;
             return value;
@@ -54,7 +54,7 @@ public class StackWithMin1 {
         if (element >= globalMin) {
             stack.offerFirst(element);
         } else {
-            stack.offerFirst(2 * element - globalMin);
+            stack.offerFirst(2 * element - globalMin); // when element < globalMin
             globalMin = element;
         }
     }
