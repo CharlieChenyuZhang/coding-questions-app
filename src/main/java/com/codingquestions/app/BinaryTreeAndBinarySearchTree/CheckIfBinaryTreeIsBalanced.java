@@ -10,7 +10,10 @@ import java.util.ArrayDeque;
  */
 
 // Solution:
-
+// Time: O(nlogn) -- once you draw the recursion tree - since we call findHeight
+// in each layer,
+// so it takes O(n) time in each layer and we have logn layer thus O(n logn)
+// time
 public class CheckIfBinaryTreeIsBalanced {
     // solution 1:
     // TIME: O(n logn)
