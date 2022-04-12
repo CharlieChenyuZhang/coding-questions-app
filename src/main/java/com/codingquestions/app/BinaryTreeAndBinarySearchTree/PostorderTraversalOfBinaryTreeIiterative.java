@@ -89,4 +89,32 @@ public class PostorderTraversalOfBinaryTreeIiterative {
         }
         return result;
     }
+
+    // method 2: notice that postOrder is the reverse of inOrder that explores the
+    // right sub-tree first
+    public List<Integer> postOrder2(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.offerFirst(root);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pollFirst();
+            result.add(cur.key);
+
+            if (cur.left != null) {
+                stack.offerFirst(cur.left);
+            }
+
+            if (cur.right != null) {
+                stack.offerFirst(cur.right);
+            }
+
+        }
+
+        Collections.reverse(result);
+        return result;
+    }
 }

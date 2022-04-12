@@ -31,13 +31,12 @@ public class DeleteInBinarySearchTree {
         }
 
         if (root.key == key) {
-            // case 1 & 2
+            // case 1 & 2 - both children are null; only one child is null
             if (root.left == null) {
                 return root.right;
-                // case 3
             } else if (root.right == null) {
                 return root.left;
-            } else if (root.right.left == null) {
+            } else if (root.right.left == null) { // case 3 - none of the children are null
                 root.right.left = root.left;
                 return root.right;
             } else {
