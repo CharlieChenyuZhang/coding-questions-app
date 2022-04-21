@@ -41,6 +41,7 @@ public class KSmallestInUnsortedArray {
         return result;
     }
 
+    // method 2: maxHeap recommended
     // TIME: O(nlog(k) + klog(k)) = O((n + k)log(k))
     // SPACE: O(k)
     public int[] kSmallest2(int[] array, int k) {
@@ -78,6 +79,7 @@ public class KSmallestInUnsortedArray {
         return result;
     }
 
+    // method 3:
     // quick select
     // TIME: worst case O(n^2), average case O(n + n/2 + n/4 + ...) = O(1)
     public int[] kSmallest(int[] array, int k) {
