@@ -29,16 +29,9 @@ public class DetermineIfOneStringIsAnothersSubstring {
             return 0;
         }
 
-        // NOTEL the ending index
+        // NOTE: the ending index
         for (int i = 0; i <= large.length() - small.length(); i++) {
-            int tmp = i;
-            for (int j = 0; j < small.length(); j++) {
-                if (large.charAt(tmp) != small.charAt(j)) {
-                    break;
-                }
-                tmp++;
-            }
-            if (tmp - i == small.length()) {
+            if (equals(large, i, small)) {
                 return i;
             }
         }
@@ -47,7 +40,7 @@ public class DetermineIfOneStringIsAnothersSubstring {
 
     // TIME: O(n)
     // SPACE: O(1)
-    // assuming the known charSize is the 26 lower case characters
+    // assuming the known charSize is the 26 lower case characters RabinKarp
     public int strstr2(String large, String small) {
         if (large.length() < small.length()) {
             return -1;
