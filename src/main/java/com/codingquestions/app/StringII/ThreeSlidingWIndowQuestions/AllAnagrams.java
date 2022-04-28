@@ -2,6 +2,7 @@ package com.codingquestions.app.StringII.ThreeSlidingWIndowQuestions;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ArrayList;
 
 /**
@@ -19,68 +20,55 @@ import java.util.ArrayList;
 // TIEM: O(n)
 // SPACE: O(n)
 public class AllAnagrams {
-    public List<Integer> allAnagrams(String sh, String lo) {
-        // build the HashMap using the sh string
+    public List<Integer> allAnagrams(String s, String l) {
         List<Integer> result = new ArrayList<>();
-        if (lo.length() == 0) {
+        if (l.length() == 0) {
             return result;
         }
-
-        if (sh.length() > lo.length()) {
+        if (s.length() > l.length()) {
             return result;
         }
-
-        HashMap<Character, Integer> map = buildHashMap(sh);
-
-        char[] array = lo.toCharArray();
-        int counter = 0; // tracks how many matches we have
-        int i = 0;// left boundary in lo
-        // j is the right boundary in lo
-        for (int j = 0; j <= array.length - 1; j++) {
-            // handle the right pointer first
-            Integer val = map.get(array[j]);
-            if (val != null) {
-                map.put(array[j], val - 1);
-                if (val == 1) {
-                    counter++;
+        Map<Character, Integer> map = countMap(s); // count the number that hasn't matched yet
+        int match = 0;
+        for (int i = 0; i < l.length(); i++) {
+            char tmp = l.charAt(i);
+            Integer count = map.get(tmp);
+            // handle the rightmost character
+            if (count != null) {
+                map.put(tmp, count - 1);
+                if (count == 1) {
+                    match++;
                 }
             }
-
-            // handle the left pointer first
-            if (j - i == sh.length()) {
-                // remove the ele that i was originally pointed at
-                // then i++
-                val = map.get(array[i]);
-                if (val != null) {
-                    map.put(array[i], val + 1);
-                    if (val == 0) {
-                        counter--;
+            // handle the leftmost character
+            if (i >= s.length()) {
+                tmp = l.charAt(i - s.length());
+                count = map.get(tmp);
+                if (count != null) {
+                    map.put(tmp, count + 1);
+                    if (count == 0) {
+                        match--;
                     }
                 }
-                i++;
             }
-
-            if (counter == map.size()) {
-                result.add(i);
+            // for the current sliding window
+            if (match == map.size()) {
+                result.add(i - s.length() + 1);
             }
         }
         return result;
     }
 
-    private HashMap<Character, Integer> buildHashMap(String sh) {
-        char[] array = sh.toCharArray();
-        HashMap<Character, Integer> result = new HashMap<>();
-
+    private Map<Character, Integer> countMap(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        char[] array = s.toCharArray();
         for (int i = 0; i < array.length; i++) {
-            Character key = array[i];
-            Integer val = result.get(key);
-            if (val == null) {
-                result.put(key, 1);
-            } else {
-                result.put(key, val + 1);
-            }
+            // case 1: element is not in the map yet
+            // case 2: element is in the map
+            Integer count = map.get(array[i]);
+            count = count == null ? 1 : count + 1;
+            map.put(array[i], count);
         }
-        return result;
+        return map;
     }
-
 }
